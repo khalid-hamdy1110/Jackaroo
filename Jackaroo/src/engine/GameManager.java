@@ -1,5 +1,3 @@
 package engine;
 
-public interface GameManager {
-
-}
+public interface GameManager {}
