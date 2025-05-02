@@ -3,7 +3,8 @@ package model.card;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
 
 import model.card.standard.*;
 import model.card.wild.*;
@@ -80,25 +81,11 @@ public class Deck {
 	}
 	
 	public static ArrayList<Card> drawCards() {
-		ArrayList<Card> newPool = new ArrayList<Card>();
-		Random rand = new Random();
-		
-		// Shuffling the cardsPool
-		for (int i = 0; i<cardsPool.size(); i++) {
-			int newIndex = rand.nextInt(cardsPool.size());
-			Card temp = cardsPool.get(i);
-			cardsPool.set(i, cardsPool.get(newIndex));
-			cardsPool.set(newIndex, temp);
-		}
-		
-		// Removes First 4 cards from cardsPool if its not already empty then adds it to newPool
-		int i = 0;
-		while((!cardsPool.isEmpty()) && i<4) {
-			newPool.add(cardsPool.remove(0));
-			i++;
-		}
-		
-		return newPool;
+		// Shuffling using Collections
+		Collections.shuffle(cardsPool);
+        ArrayList<Card> cards = new ArrayList<>(cardsPool.subList(0, 4));
+        cardsPool.subList(0, 4).clear();
+        return cards;
 	}
 	
 	// Used to account for the cases where the CSV contains <"> and commas inside
@@ -129,4 +116,16 @@ public class Deck {
 		
 		return resultArr;
 	}
+	
+	
+	// Milestone 2 methods
+	
+	public static void refillPool(ArrayList<Card> cards) {
+		cardsPool.addAll(cards);
+	}
+	
+	public static int getPoolSize() {
+		 // if we use .remove then this is correct
+		 return cardsPool.size();
+	 }
 }

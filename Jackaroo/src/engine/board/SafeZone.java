@@ -22,4 +22,14 @@ public class SafeZone {
 	public ArrayList<Cell> getCells() {
 		return cells;
 	}
+	
+	// Milestone 2 method
+	
+	public boolean isFull() {
+		for (int i = 0; i<4; i++) {
+			if (cells.get(i).getMarble() == null)
+				return false;
+		}
+		return true;
+	}
 }
