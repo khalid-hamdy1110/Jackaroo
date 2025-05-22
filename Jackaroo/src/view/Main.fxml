@@ -1,0 +1,2738 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#marbleFieldingShortcut" prefHeight="950.0" prefWidth="1250.0" style="-fx-background-color: #1B4D3E; -fx-border-color: #773811; -fx-border-width: 7;" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <children>
+      <Pane layoutX="350.0" layoutY="199.0" prefHeight="550.0" prefWidth="550.0" style="-fx-background-color: #c9a583; -fx-border-color: #773811; -fx-border-width: 10;" styleClass="board-grid">
+         <children>
+            <Circle fill="#773811" layoutX="275.0" layoutY="275.0" radius="102.0" stroke="BLACK" strokeType="INSIDE">
+               <effect>
+                  <InnerShadow height="100.0" radius="49.5" width="100.0" />
+               </effect>
+            </Circle>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="173.0" layoutY="241.0" prefHeight="69.0" prefWidth="204.0" text="JACKAROO" textAlignment="CENTER" textFill="#a17448">
+               <font>
+                  <Font name="Bernard MT Condensed" size="46.0" />
+               </font>
+               <effect>
+                  <InnerShadow choke="0.04" height="15.16" radius="8.54" />
+               </effect>
+            </Label>
+            <StackPane fx:id="firepitCard" layoutX="215.0" layoutY="186.0" prefHeight="175.0" prefWidth="120.0" styleClass="firepit">
+               <children>
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="175.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="165.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+                  <VBox alignment="TOP_CENTER" prefHeight="175.0" prefWidth="120.0">
+                     <children>
+                        <Label fx:id="cardName011" contentDisplay="CENTER" lineSpacing="1.0" prefHeight="30.0" prefWidth="105.0" text="n">
+                           <font>
+                              <Font name="Verdana Bold" size="15.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="10.0" top="8.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="description011" alignment="CENTER" contentDisplay="CENTER" prefHeight="125.0" prefWidth="105.0" text="description" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Verdana" size="11.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="suit011" alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="30.0" prefWidth="105.0" text="s" textAlignment="CENTER">
+                           <font>
+                              <Font name="Verdana" size="20.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="8.0" right="10.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </StackPane>
+            <GridPane fx:id="boardGrid" alignment="CENTER" layoutY="1.0" prefHeight="550.0" prefWidth="550.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="17" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="15" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="18" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="19" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="15" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="17" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="17" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="18" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="19" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="19" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.rowIndex="19" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="19" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="18" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="15" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="17" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="15">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="18" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.rowIndex="15" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="16" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="17" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="18" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="19" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="TOP">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="15" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="16" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="17" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="18" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="19" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="19" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="15" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="16" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="17" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="18" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="19" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="19" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="15" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="17" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="TOP">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="18" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="BOTTOM">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="14" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="15" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="TOP">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="14" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="13" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="TOP">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="15" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="16" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="16" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="17" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="18" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="18" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="17" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="16" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="16" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="15" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="BOTTOM">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="14" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="TOP">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="13" GridPane.halignment="CENTER" GridPane.rowIndex="15" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="16" GridPane.halignment="LEFT" GridPane.rowIndex="17" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="16" GridPane.halignment="CENTER" GridPane.rowIndex="18" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="17" GridPane.halignment="CENTER" GridPane.rowIndex="18" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="18" GridPane.halignment="CENTER" GridPane.rowIndex="17" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="18" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="17" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="TOP">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="16" GridPane.halignment="RIGHT" GridPane.rowIndex="15" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="16" GridPane.halignment="LEFT" GridPane.rowIndex="14" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="15" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="14" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="TOP">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="14" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="13" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="13" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="17" GridPane.halignment="RIGHT" GridPane.rowIndex="13" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="17" GridPane.halignment="RIGHT" GridPane.rowIndex="14" GridPane.valignment="TOP">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="18" GridPane.halignment="CENTER" GridPane.rowIndex="14" GridPane.valignment="TOP">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="18" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="6" GridPane.halignment="RIGHT" GridPane.rowIndex="18" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="6" GridPane.halignment="RIGHT" GridPane.rowIndex="17" GridPane.valignment="BOTTOM">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="18" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="17" GridPane.valignment="BOTTOM">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="BOTTOM">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="BOTTOM">
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+                     </effect>
+                  </Circle>
+                  <StackPane fx:id="track99" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="9" GridPane.rowIndex="19">
+                     <children>
+                        <Circle fx:id="marble0013839" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track0" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="8" GridPane.rowIndex="19">
+                     <children>
+                        <Circle fx:id="marble001" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track1" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="8" GridPane.rowIndex="18">
+                     <children>
+                        <Circle fx:id="marble00137" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track2" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="8" GridPane.rowIndex="17">
+                     <children>
+                        <Circle fx:id="marble00136" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track3" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="8" GridPane.rowIndex="16">
+                     <children>
+                        <Circle fx:id="marble00135" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track4" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="8" GridPane.rowIndex="15">
+                     <children>
+                        <Circle fx:id="marble00134" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track5" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="7" GridPane.rowIndex="15">
+                     <children>
+                        <Circle fx:id="marble00133" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track6" alignment="TOP_CENTER" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="6" GridPane.rowIndex="16" GridPane.valignment="TOP">
+                     <children>
+                        <Circle fx:id="marble00132" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track7" alignment="BOTTOM_CENTER" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="5" GridPane.rowIndex="16">
+                     <children>
+                        <Circle fx:id="marble00131" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track8" alignment="CENTER_RIGHT" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="4" GridPane.rowIndex="17">
+                     <children>
+                        <Circle fx:id="marble00130" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track9" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="4" GridPane.rowIndex="18">
+                     <children>
+                        <Circle fx:id="marble00129" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track10" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="3" GridPane.rowIndex="18">
+                     <children>
+                        <Circle fx:id="marble00128" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track11" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="2" GridPane.rowIndex="17">
+                     <children>
+                        <Circle fx:id="marble00127" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track12" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="2" GridPane.rowIndex="16">
+                     <children>
+                        <Circle fx:id="marble00126" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track13" alignment="TOP_CENTER" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="3" GridPane.rowIndex="16">
+                     <children>
+                        <Circle fx:id="marble00125" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track14" alignment="CENTER_LEFT" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="4" GridPane.rowIndex="15">
+                     <children>
+                        <Circle fx:id="marble00124" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track15" alignment="CENTER_RIGHT" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="4" GridPane.rowIndex="14">
+                     <children>
+                        <Circle fx:id="marble00123" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track16" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="5" GridPane.rowIndex="13">
+                     <children>
+                        <Circle fx:id="marble00122" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track17" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="5" GridPane.rowIndex="12">
+                     <children>
+                        <Circle fx:id="marble00121" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track18" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="4" GridPane.rowIndex="12">
+                     <children>
+                        <Circle fx:id="marble0011" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track19" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="3" GridPane.rowIndex="12">
+                     <children>
+                        <Circle fx:id="marble00120" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track20" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="2" GridPane.rowIndex="12">
+                     <children>
+                        <Circle fx:id="marble00118" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track21" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="1" GridPane.rowIndex="12">
+                     <children>
+                        <Circle fx:id="marble00117" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track22" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="1" GridPane.rowIndex="11">
+                     <children>
+                        <Circle fx:id="marble00116" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track23" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                     <children>
+                        <Circle fx:id="marble00115" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track24" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                     <children>
+                        <Circle fx:id="marble00114" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track25" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                     <children>
+                        <Circle fx:id="marble0019" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track26" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="2" GridPane.rowIndex="8">
+                     <children>
+                        <Circle fx:id="marble0018" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track27" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="3" GridPane.rowIndex="8">
+                     <children>
+                        <Circle fx:id="marble0017" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track28" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="4" GridPane.rowIndex="8">
+                     <children>
+                        <Circle fx:id="marble0016" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track29" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="5" GridPane.rowIndex="8">
+                     <children>
+                        <Circle fx:id="marble0015" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track31" alignment="CENTER_RIGHT" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="4" GridPane.rowIndex="6">
+                     <children>
+                        <Circle fx:id="marble0013" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track32" alignment="CENTER_LEFT" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="4" GridPane.rowIndex="5">
+                     <children>
+                        <Circle fx:id="marble0012" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track33" alignment="BOTTOM_CENTER" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                     <children>
+                        <Circle fx:id="marble00175" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track34" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <children>
+                        <Circle fx:id="marble00174" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track35" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <children>
+                        <Circle fx:id="marble00173" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track36" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <children>
+                        <Circle fx:id="marble00172" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track37" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                     <children>
+                        <Circle fx:id="marble00171" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track38" alignment="CENTER_RIGHT" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                     <children>
+                        <Circle fx:id="marble00170" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track39" alignment="TOP_CENTER" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="5" GridPane.rowIndex="4">
+                     <children>
+                        <Circle fx:id="marble00169" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track40" alignment="BOTTOM_CENTER" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="6" GridPane.rowIndex="4">
+                     <children>
+                        <Circle fx:id="marble00168" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track41" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="7" GridPane.rowIndex="5">
+                     <children>
+                        <Circle fx:id="marble00167" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track42" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="8" GridPane.rowIndex="5">
+                     <children>
+                        <Circle fx:id="marble00166" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track43" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="8" GridPane.rowIndex="4">
+                     <children>
+                        <Circle fx:id="marble00165" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track44" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="8" GridPane.rowIndex="3">
+                     <children>
+                        <Circle fx:id="marble00164" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track45" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="8" GridPane.rowIndex="2">
+                     <children>
+                        <Circle fx:id="marble00163" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track46" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="8" GridPane.rowIndex="1">
+                     <children>
+                        <Circle fx:id="marble00119" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track47" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="9" GridPane.rowIndex="1">
+                     <children>
+                        <Circle fx:id="marble00162" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track48" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="10" GridPane.rowIndex="1">
+                     <children>
+                        <Circle fx:id="marble00161" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track49" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="11" GridPane.rowIndex="1">
+                     <children>
+                        <Circle fx:id="marble00156" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track50" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="12" GridPane.rowIndex="1">
+                     <children>
+                        <Circle fx:id="marble00155" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track51" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="12" GridPane.rowIndex="2">
+                     <children>
+                        <Circle fx:id="marble00154" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track52" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="12" GridPane.rowIndex="3">
+                     <children>
+                        <Circle fx:id="marble00153" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track53" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="12" GridPane.rowIndex="4">
+                     <children>
+                        <Circle fx:id="marble00152" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track54" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="12" GridPane.rowIndex="5">
+                     <children>
+                        <Circle fx:id="marble00151" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track55" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="13" GridPane.rowIndex="5">
+                     <children>
+                        <Circle fx:id="marble00150" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track56" alignment="BOTTOM_CENTER" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="14" GridPane.rowIndex="4">
+                     <children>
+                        <Circle fx:id="marble00149" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track57" alignment="TOP_CENTER" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="15" GridPane.rowIndex="4">
+                     <children>
+                        <Circle fx:id="marble00148" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track58" alignment="CENTER_LEFT" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="16" GridPane.rowIndex="3">
+                     <children>
+                        <Circle fx:id="marble00147" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track59" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="16" GridPane.rowIndex="2">
+                     <children>
+                        <Circle fx:id="marble00146" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track60" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="17" GridPane.rowIndex="2">
+                     <children>
+                        <Circle fx:id="marble00145" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track61" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="18" GridPane.rowIndex="3">
+                     <children>
+                        <Circle fx:id="marble00144" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track62" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="18" GridPane.rowIndex="4">
+                     <children>
+                        <Circle fx:id="marble00143" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track63" alignment="BOTTOM_CENTER" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="17" GridPane.rowIndex="4">
+                     <children>
+                        <Circle fx:id="marble00142" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track64" alignment="CENTER_RIGHT" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="16" GridPane.rowIndex="5">
+                     <children>
+                        <Circle fx:id="marble00141" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track65" alignment="CENTER_LEFT" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="16" GridPane.rowIndex="6">
+                     <children>
+                        <Circle fx:id="marble00140" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track66" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="15" GridPane.rowIndex="7">
+                     <children>
+                        <Circle fx:id="marble00139" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track67" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="15" GridPane.rowIndex="8">
+                     <children>
+                        <Circle fx:id="marble0013813" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track68" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="16" GridPane.rowIndex="8">
+                     <children>
+                        <Circle fx:id="marble001388" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track69" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="17" GridPane.rowIndex="8">
+                     <children>
+                        <Circle fx:id="marble001387" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track70" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="18" GridPane.rowIndex="8">
+                     <children>
+                        <Circle fx:id="marble001386" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track71" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="19" GridPane.rowIndex="8">
+                     <children>
+                        <Circle fx:id="marble001385" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track72" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="19" GridPane.rowIndex="9">
+                     <children>
+                        <Circle fx:id="marble001384" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track73" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="19" GridPane.rowIndex="10">
+                     <children>
+                        <Circle fx:id="marble001383" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track74" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="19" GridPane.rowIndex="11">
+                     <children>
+                        <Circle fx:id="marble0013811" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track75" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="19" GridPane.rowIndex="12">
+                     <children>
+                        <Circle fx:id="marble0013810" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track76" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="18" GridPane.rowIndex="12">
+                     <children>
+                        <Circle fx:id="marble001389" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track77" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="17" GridPane.rowIndex="12">
+                     <children>
+                        <Circle fx:id="marble0013824" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track78" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="16" GridPane.rowIndex="12">
+                     <children>
+                        <Circle fx:id="marble0013822" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track79" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="15" GridPane.rowIndex="12">
+                     <children>
+                        <Circle fx:id="marble0013823" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track80" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="15" GridPane.rowIndex="13">
+                     <children>
+                        <Circle fx:id="marble0013821" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track81" alignment="CENTER_LEFT" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="16" GridPane.rowIndex="14">
+                     <children>
+                        <Circle fx:id="marble0013820" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track82" alignment="CENTER_RIGHT" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="16" GridPane.rowIndex="15">
+                     <children>
+                        <Circle fx:id="marble0013819" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track83" alignment="TOP_CENTER" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="17" GridPane.rowIndex="16">
+                     <children>
+                        <Circle fx:id="marble0013818" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track84" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="18" GridPane.rowIndex="16">
+                     <children>
+                        <Circle fx:id="marble0013817" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track85" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="18" GridPane.rowIndex="17">
+                     <children>
+                        <Circle fx:id="marble0013816" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track86" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="17" GridPane.rowIndex="18">
+                     <children>
+                        <Circle fx:id="marble0013815" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track87" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="16" GridPane.rowIndex="18">
+                     <children>
+                        <Circle fx:id="marble0013838" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track88" alignment="CENTER_LEFT" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="16" GridPane.rowIndex="17">
+                     <children>
+                        <Circle fx:id="marble0013837" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track89" alignment="BOTTOM_CENTER" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="15" GridPane.rowIndex="16">
+                     <children>
+                        <Circle fx:id="marble0013836" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track90" alignment="TOP_CENTER" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="14" GridPane.rowIndex="16">
+                     <children>
+                        <Circle fx:id="marble0013835" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track91" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="13" GridPane.rowIndex="15">
+                     <children>
+                        <Circle fx:id="marble0013834" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track92" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="12" GridPane.rowIndex="15">
+                     <children>
+                        <Circle fx:id="marble0013833" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track93" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="12" GridPane.rowIndex="16">
+                     <children>
+                        <Circle fx:id="marble0013832" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track94" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="12" GridPane.rowIndex="17">
+                     <children>
+                        <Circle fx:id="marble0013831" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track95" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="12" GridPane.rowIndex="18">
+                     <children>
+                        <Circle fx:id="marble0013830" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track96" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="12" GridPane.rowIndex="19">
+                     <children>
+                        <Circle fx:id="marble0013829" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track97" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="11" GridPane.rowIndex="19">
+                     <children>
+                        <Circle fx:id="marble0013828" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track98" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="10" GridPane.rowIndex="19">
+                     <children>
+                        <Circle fx:id="marble0013827" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="safezone10" prefHeight="150.0" prefWidth="200.0" styleClass="safezone0" GridPane.columnIndex="10" GridPane.rowIndex="18">
+                     <children>
+                        <Circle fx:id="marble0013826" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="safezone11" prefHeight="150.0" prefWidth="200.0" styleClass="safezone0" GridPane.columnIndex="10" GridPane.rowIndex="17">
+                     <children>
+                        <Circle fx:id="marble0013825" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="safezone12" prefHeight="150.0" prefWidth="200.0" styleClass="safezone0" GridPane.columnIndex="10" GridPane.rowIndex="16">
+                     <children>
+                        <Circle fx:id="marble0013841" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="safezone13" prefHeight="150.0" prefWidth="200.0" styleClass="safezone0" GridPane.columnIndex="10" GridPane.rowIndex="15">
+                     <children>
+                        <Circle fx:id="marble0013840" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="safezone20" prefHeight="150.0" prefWidth="200.0" styleClass="safezone1" GridPane.columnIndex="2" GridPane.rowIndex="10">
+                     <children>
+                        <Circle fx:id="marble00113" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="safezone21" prefHeight="150.0" prefWidth="200.0" styleClass="safezone1" GridPane.columnIndex="3" GridPane.rowIndex="10">
+                     <children>
+                        <Circle fx:id="marble00112" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="safezone22" prefHeight="150.0" prefWidth="200.0" styleClass="safezone1" GridPane.columnIndex="4" GridPane.rowIndex="10">
+                     <children>
+                        <Circle fx:id="marble00111" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="safezone23" prefHeight="150.0" prefWidth="200.0" styleClass="safezone1" GridPane.columnIndex="5" GridPane.rowIndex="10">
+                     <children>
+                        <Circle fx:id="marble00110" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="safezone33" prefHeight="150.0" prefWidth="200.0" styleClass="safezone2" GridPane.columnIndex="10" GridPane.rowIndex="5">
+                     <children>
+                        <Circle fx:id="marble00157" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="safezone32" prefHeight="150.0" prefWidth="200.0" styleClass="safezone2" GridPane.columnIndex="10" GridPane.rowIndex="4">
+                     <children>
+                        <Circle fx:id="marble00158" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="safezone31" prefHeight="150.0" prefWidth="200.0" styleClass="safezone2" GridPane.columnIndex="10" GridPane.rowIndex="3">
+                     <children>
+                        <Circle fx:id="marble00159" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="safezone30" prefHeight="150.0" prefWidth="200.0" styleClass="safezone2" GridPane.columnIndex="10" GridPane.rowIndex="2">
+                     <children>
+                        <Circle fx:id="marble00160" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="safezone43" prefHeight="150.0" prefWidth="200.0" styleClass="safezone3" GridPane.columnIndex="15" GridPane.rowIndex="10">
+                     <children>
+                        <Circle fx:id="marble0013812" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="safezone42" prefHeight="150.0" prefWidth="200.0" styleClass="safezone3" GridPane.columnIndex="16" GridPane.rowIndex="10">
+                     <children>
+                        <Circle fx:id="marble00138" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="safezone41" prefHeight="150.0" prefWidth="200.0" styleClass="safezone3" GridPane.columnIndex="17" GridPane.rowIndex="10">
+                     <children>
+                        <Circle fx:id="marble001381" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="safezone40" prefHeight="150.0" prefWidth="200.0" styleClass="safezone3" GridPane.columnIndex="18" GridPane.rowIndex="10">
+                     <children>
+                        <Circle fx:id="marble001382" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="homezone10" alignment="CENTER_RIGHT" prefHeight="150.0" prefWidth="200.0" styleClass="homezone0" GridPane.columnIndex="6" GridPane.rowIndex="18">
+                     <children>
+                        <Circle fx:id="marble00" fill="WHITE" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="homezone11" alignment="BOTTOM_RIGHT" prefHeight="150.0" prefWidth="200.0" styleClass="homezone0" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="17" GridPane.valignment="BOTTOM">
+                     <GridPane.margin>
+                        <Insets bottom="0.5" />
+                     </GridPane.margin>
+                     <children>
+                        <Circle fx:id="marble01" fill="WHITE" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="homezone12" alignment="BOTTOM_CENTER" prefHeight="150.0" prefWidth="200.0" styleClass="homezone0" GridPane.columnIndex="7" GridPane.halignment="LEFT" GridPane.rowIndex="17" GridPane.valignment="BOTTOM">
+                     <GridPane.margin>
+                        <Insets bottom="0.5" left="0.5" />
+                     </GridPane.margin>
+                     <children>
+                        <Circle fx:id="marble02" fill="WHITE" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="homezone13" prefHeight="150.0" prefWidth="200.0" styleClass="homezone0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="18" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets left="0.5" top="0.5" />
+                     </GridPane.margin>
+                     <children>
+                        <Circle fx:id="marble03" fill="WHITE" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="homezone20" alignment="BOTTOM_CENTER" prefHeight="150.0" prefWidth="200.0" styleClass="homezone1" GridPane.columnIndex="2" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                     <children>
+                        <Circle fx:id="marble10" fill="WHITE" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="homezone21" alignment="BOTTOM_LEFT" prefHeight="150.0" prefWidth="200.0" styleClass="homezone1" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+                     <children>
+                        <Circle fx:id="marble11" fill="WHITE" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="homezone23" prefHeight="150.0" prefWidth="200.0" styleClass="homezone1" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="TOP">
+                     <children>
+                        <Circle fx:id="marble13" fill="WHITE" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="homezone22" alignment="CENTER_LEFT" prefHeight="150.0" prefWidth="200.0" styleClass="homezone1" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="TOP">
+                     <children>
+                        <Circle fx:id="marble12" fill="WHITE" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="homezone31" alignment="TOP_LEFT" prefHeight="150.0" prefWidth="200.0" styleClass="homezone2" GridPane.columnIndex="14" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP">
+                     <children>
+                        <Circle fx:id="marble21" fill="WHITE" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="homezone32" alignment="TOP_CENTER" prefHeight="150.0" prefWidth="200.0" styleClass="homezone2" GridPane.columnIndex="13" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="TOP">
+                     <children>
+                        <Circle fx:id="marble22" fill="WHITE" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="homezone33" prefHeight="150.0" prefWidth="200.0" styleClass="homezone2" GridPane.columnIndex="13" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <children>
+                        <Circle fx:id="marble23" fill="WHITE" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="homezone30" alignment="CENTER_LEFT" prefHeight="150.0" prefWidth="200.0" styleClass="homezone2" GridPane.columnIndex="14" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <children>
+                        <Circle fx:id="marble20" fill="WHITE" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="homezone42" alignment="CENTER_RIGHT" prefHeight="150.0" prefWidth="200.0" styleClass="homezone3" GridPane.columnIndex="17" GridPane.halignment="RIGHT" GridPane.rowIndex="13" GridPane.valignment="BOTTOM">
+                     <children>
+                        <Circle fx:id="marble32" fill="WHITE" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="homezone43" prefHeight="150.0" prefWidth="200.0" styleClass="homezone3" GridPane.columnIndex="18" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="BOTTOM">
+                     <children>
+                        <Circle fx:id="marble33" fill="WHITE" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="homezone41" alignment="TOP_RIGHT" prefHeight="150.0" prefWidth="200.0" styleClass="homezone3" GridPane.columnIndex="17" GridPane.halignment="RIGHT" GridPane.rowIndex="14" GridPane.valignment="CENTER">
+                     <children>
+                        <Circle fx:id="marble31" fill="WHITE" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="homezone40" alignment="TOP_CENTER" prefHeight="150.0" prefWidth="200.0" styleClass="homezone3" GridPane.columnIndex="18" GridPane.halignment="CENTER" GridPane.rowIndex="14" GridPane.valignment="CENTER">
+                     <children>
+                        <Circle fx:id="marble30" fill="WHITE" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="track30" prefHeight="150.0" prefWidth="200.0" styleClass="track-cell" GridPane.columnIndex="5" GridPane.rowIndex="7">
+                     <children>
+                        <Circle fx:id="marble0014" fill="WHITE" onMouseClicked="#selectMarble" radius="6.0" stroke="BLACK" strokeType="INSIDE" styleClass="marbles">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Circle>
+                     </children>
+                  </StackPane>
+               </children>
+            </GridPane>
+         </children>
+         <effect>
+            <DropShadow height="45.0" radius="22.0" width="45.0" />
+         </effect>
+      </Pane>
+      <Label fx:id="playerName" alignment="CENTER" contentDisplay="CENTER" layoutX="263.0" layoutY="847.0" prefHeight="32.0" prefWidth="105.0" styleClass="labelFont" stylesheets="@styles.css" text="&lt;Name&gt;" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Bernard MT Condensed" size="28.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </Label>
+      <Label fx:id="cpuName1" alignment="CENTER" contentDisplay="CENTER" layoutX="42.0" layoutY="458.0" prefHeight="32.0" prefWidth="105.0" styleClass="labelFont" stylesheets="@styles.css" text="&lt;Name&gt;" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Bernard MT Condensed" size="28.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </Label>
+      <Label fx:id="cpuName2" alignment="CENTER" contentDisplay="CENTER" layoutX="891.0" layoutY="100.0" prefHeight="32.0" prefWidth="105.0" styleClass="labelFont" stylesheets="@styles.css" text="&lt;Name&gt;" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Bernard MT Condensed" size="28.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </Label>
+      <Label fx:id="cpuName3" alignment="CENTER" contentDisplay="CENTER" layoutX="1107.0" layoutY="459.0" prefHeight="32.0" prefWidth="105.0" styleClass="labelFont" stylesheets="@styles.css" text="&lt;Name&gt;" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Bernard MT Condensed" size="28.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </Label>
+      <Circle fx:id="cpuColour1" fill="DODGERBLUE" layoutX="95.0" layoutY="437.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cpuColour2" fill="DODGERBLUE" layoutX="944.0" layoutY="78.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cpuColour3" fill="DODGERBLUE" layoutX="1160.0" layoutY="438.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="playerColour" fill="DODGERBLUE" layoutX="316.0" layoutY="829.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+      <HBox fx:id="handBox0" layoutX="382.0" layoutY="760.0" prefHeight="175.0" prefWidth="443.0" spacing="2.0">
+         <children>
+            <StackPane fx:id="card00" onMouseClicked="#cardSelection" prefHeight="175.0" prefWidth="120.0" styleClass="cards0" stylesheets="@styles.css">
+               <children>
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="175.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="165.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+                  <VBox alignment="TOP_CENTER" prefHeight="175.0" prefWidth="120.0">
+                     <children>
+                        <Label fx:id="cardName01" contentDisplay="CENTER" lineSpacing="1.0" prefHeight="30.0" prefWidth="105.0" text="n">
+                           <font>
+                              <Font name="Verdana Bold" size="15.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="10.0" top="8.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="description01" alignment="CENTER" contentDisplay="CENTER" prefHeight="125.0" prefWidth="105.0" text="description" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Verdana" size="11.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="suit01" alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="30.0" prefWidth="105.0" text="s" textAlignment="CENTER">
+                           <font>
+                              <Font name="Verdana" size="20.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="8.0" right="10.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </StackPane>
+            <StackPane fx:id="card01" onMouseClicked="#cardSelection" prefHeight="175.0" prefWidth="120.0" styleClass="cards0" stylesheets="@styles.css">
+               <children>
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="175.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="165.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+                  <VBox alignment="TOP_CENTER" prefHeight="175.0" prefWidth="120.0">
+                     <children>
+                        <Label fx:id="cardName1" contentDisplay="CENTER" prefHeight="30.0" prefWidth="105.0" text="n">
+                           <font>
+                              <Font name="Verdana Bold" size="15.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="10.0" top="8.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="description1" alignment="CENTER" contentDisplay="CENTER" prefHeight="125.0" prefWidth="105.0" text="description" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Verdana" size="11.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="suit1" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="105.0" text="s">
+                           <font>
+                              <Font name="Verdana" size="20.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="8.0" right="10.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </StackPane>
+            <StackPane fx:id="card02" onMouseClicked="#cardSelection" prefHeight="175.0" prefWidth="120.0" styleClass="cards0" stylesheets="@styles.css">
+               <children>
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="175.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="165.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+                  <VBox alignment="TOP_CENTER" prefHeight="175.0" prefWidth="120.0">
+                     <children>
+                        <Label fx:id="cardName2" contentDisplay="CENTER" prefHeight="30.0" prefWidth="105.0" text="n">
+                           <font>
+                              <Font name="Verdana Bold" size="15.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="10.0" top="8.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="description2" alignment="CENTER" contentDisplay="CENTER" prefHeight="125.0" prefWidth="105.0" text="description" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Verdana" size="11.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="suit2" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="105.0" text="s">
+                           <font>
+                              <Font name="Verdana" size="20.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="8.0" right="10.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </StackPane>
+            <StackPane fx:id="card03" onMouseClicked="#cardSelection" prefHeight="175.0" prefWidth="120.0" styleClass="cards0" stylesheets="@styles.css">
+               <children>
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="175.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="165.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+                  <VBox alignment="TOP_CENTER" prefHeight="175.0" prefWidth="120.0">
+                     <children>
+                        <Label fx:id="cardName3" prefHeight="30.0" prefWidth="105.0" text="n">
+                           <font>
+                              <Font name="Verdana Bold" size="15.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="10.0" top="8.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="description3" alignment="CENTER" contentDisplay="CENTER" prefHeight="125.0" prefWidth="105.0" text="description" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Verdana" size="11.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="suit3" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="105.0" text="s">
+                           <font>
+                              <Font name="Verdana" size="20.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="8.0" right="10.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </StackPane>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </HBox>
+      <HBox fx:id="handBox1" layoutX="2.0" layoutY="386.0" prefHeight="175.0" prefWidth="443.0" rotate="90.0" spacing="2.0">
+         <children>
+            <StackPane fx:id="card10" prefHeight="175.0" prefWidth="120.0" styleClass="cards1">
+               <children>
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="175.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#960000" height="165.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+                  <Label alignment="CENTER" prefHeight="66.0" prefWidth="136.0" rotate="270.0" styleClass="outline" stylesheets="@styles.css" text="JACKAROO">
+                     <font>
+                        <Font name="Bernard MT Condensed" size="31.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+            <StackPane fx:id="card11" prefHeight="175.0" prefWidth="120.0" styleClass="cards1">
+               <children>
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="175.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#960000" height="165.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+                  <Label alignment="CENTER" prefHeight="66.0" prefWidth="136.0" rotate="270.0" styleClass="outline" stylesheets="@styles.css" text="JACKAROO">
+                     <font>
+                        <Font name="Bernard MT Condensed" size="31.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+            <StackPane fx:id="card12" prefHeight="175.0" prefWidth="120.0" styleClass="cards1">
+               <children>
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="175.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#960000" height="165.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+                  <Label alignment="CENTER" prefHeight="66.0" prefWidth="136.0" rotate="270.0" styleClass="outline" stylesheets="@styles.css" text="JACKAROO">
+                     <font>
+                        <Font name="Bernard MT Condensed" size="31.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+            <StackPane fx:id="card13" prefHeight="175.0" prefWidth="120.0" styleClass="cards1">
+               <children>
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="175.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#960000" height="165.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+                  <Label alignment="CENTER" prefHeight="66.0" prefWidth="136.0" rotate="270.0" styleClass="outline" stylesheets="@styles.css" text="JACKAROO">
+                     <font>
+                        <Font name="Bernard MT Condensed" size="31.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </HBox>
+      <HBox fx:id="handBox2" layoutX="382.0" layoutY="11.0" prefHeight="175.0" prefWidth="443.0" rotate="180.0" spacing="2.0">
+         <children>
+            <StackPane fx:id="card20" prefHeight="175.0" prefWidth="120.0" styleClass="cards2">
+               <children>
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="175.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#960000" height="165.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+                  <Label alignment="CENTER" prefHeight="66.0" prefWidth="136.0" rotate="270.0" styleClass="outline" stylesheets="@styles.css" text="JACKAROO">
+                     <font>
+                        <Font name="Bernard MT Condensed" size="31.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+            <StackPane fx:id="card21" prefHeight="175.0" prefWidth="120.0" styleClass="cards2">
+               <children>
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="175.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#960000" height="165.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+                  <Label alignment="CENTER" prefHeight="66.0" prefWidth="136.0" rotate="270.0" styleClass="outline" stylesheets="@styles.css" text="JACKAROO">
+                     <font>
+                        <Font name="Bernard MT Condensed" size="31.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+            <StackPane fx:id="card22" prefHeight="175.0" prefWidth="120.0" styleClass="cards2">
+               <children>
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="175.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#960000" height="165.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+                  <Label alignment="CENTER" prefHeight="66.0" prefWidth="136.0" rotate="270.0" styleClass="outline" stylesheets="@styles.css" text="JACKAROO">
+                     <font>
+                        <Font name="Bernard MT Condensed" size="31.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+            <StackPane fx:id="card23" prefHeight="175.0" prefWidth="120.0" styleClass="cards2">
+               <children>
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="175.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#960000" height="165.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+                  <Label alignment="CENTER" prefHeight="66.0" prefWidth="136.0" rotate="270.0" styleClass="outline" stylesheets="@styles.css" text="JACKAROO">
+                     <font>
+                        <Font name="Bernard MT Condensed" size="31.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </HBox>
+      <HBox fx:id="handBox3" layoutX="763.0" layoutY="388.0" prefHeight="175.0" prefWidth="443.0" rotate="-90.0" spacing="2.0">
+         <children>
+            <StackPane fx:id="card30" prefHeight="175.0" prefWidth="120.0" styleClass="cards3">
+               <children>
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="175.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#960000" height="165.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+                  <Label alignment="CENTER" prefHeight="66.0" prefWidth="136.0" rotate="90.0" styleClass="outline" stylesheets="@styles.css" text="JACKAROO">
+                     <font>
+                        <Font name="Bernard MT Condensed" size="31.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+            <StackPane fx:id="card31" prefHeight="175.0" prefWidth="120.0" styleClass="cards3">
+               <children>
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="175.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#960000" height="165.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+                  <Label alignment="CENTER" prefHeight="66.0" prefWidth="136.0" rotate="90.0" styleClass="outline" stylesheets="@styles.css" text="JACKAROO">
+                     <font>
+                        <Font name="Bernard MT Condensed" size="31.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+            <StackPane fx:id="card32" prefHeight="175.0" prefWidth="120.0" styleClass="cards3">
+               <children>
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="175.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#960000" height="165.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+                  <Label alignment="CENTER" prefHeight="66.0" prefWidth="136.0" rotate="90.0" styleClass="outline" stylesheets="@styles.css" text="JACKAROO">
+                     <font>
+                        <Font name="Bernard MT Condensed" size="31.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+            <StackPane fx:id="card33" prefHeight="175.0" prefWidth="120.0" styleClass="cards3">
+               <children>
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="175.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#960000" height="165.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+                  <Label alignment="CENTER" prefHeight="66.0" prefWidth="136.0" rotate="90.0" styleClass="outline" stylesheets="@styles.css" text="JACKAROO">
+                     <font>
+                        <Font name="Bernard MT Condensed" size="31.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </HBox>
+      <Button fx:id="playTurnBtn" alignment="CENTER" layoutX="929.0" layoutY="843.0" mnemonicParsing="false" onAction="#playTurn" prefHeight="48.0" prefWidth="204.0" style="-fx-background-color: #773811;" text="Play Turn" textAlignment="CENTER" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Arial Rounded MT Bold" size="16.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <TextField fx:id="splitDistance" layoutX="929.0" layoutY="798.0" prefHeight="36.0" prefWidth="110.0" promptText="Enter Split">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></TextField>
+      <Button fx:id="setSplitBtn" alignment="CENTER" layoutX="1045.0" layoutY="798.0" mnemonicParsing="false" onAction="#setSplitDistance" prefHeight="35.0" prefWidth="87.0" style="-fx-background-color: #773811;" text="Set Split" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="16.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></Button>
+      <Pane fx:id="alertPane" layoutX="325.0" layoutY="315.0" prefHeight="317.0" prefWidth="600.0" style="-fx-background-color: #FFF8E1; -fx-border-color: #9c4916; -fx-border-width: 10;">
+         <children>
+            <Label fx:id="alertLabel" alignment="CENTER" layoutX="10.0" layoutY="91.0" prefHeight="135.0" prefWidth="579.0" styleClass="outline2" stylesheets="@styles.css" text="Label" textFill="RED" wrapText="true">
+               <font>
+                  <Font name="Bernard MT Condensed" size="34.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow height="90.0" radius="44.5" width="90.0" />
+         </effect>
+      </Pane>
+      <Pane fx:id="errPane" layoutX="369.0" layoutY="350.0" prefHeight="257.0" prefWidth="511.0" style="-fx-background-color: #FFF8E1; -fx-border-color: #841313; -fx-border-width: 10;">
+         <children>
+            <Label fx:id="errLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="16.0" layoutY="19.0" prefHeight="165.0" prefWidth="480.0" stylesheets="@styles.css" text="Label" textAlignment="CENTER" textFill="#be1f1f" wrapText="true">
+               <font>
+                  <Font name="Tahoma Bold" size="30.0" />
+               </font>
+            </Label>
+            <Button fx:id="alertOkBtn" alignment="CENTER" layoutX="415.0" layoutY="191.0" mnemonicParsing="false" onAction="#alertOK" prefHeight="42.0" prefWidth="73.0" style="-fx-background-color: #9c1717;" text="OK" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+         <effect>
+            <DropShadow height="90.0" radius="44.5" width="90.0" />
+         </effect>
+      </Pane>
+   </children>
+   <effect>
+      <InnerShadow height="40.0" radius="19.5" width="40.0" />
+   </effect>
+</AnchorPane>

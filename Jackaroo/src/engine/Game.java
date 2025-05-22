@@ -109,48 +109,34 @@ public class Game implements GameManager{
 	
 	public void playPlayerTurn() throws GameException {
 		// checking if he can play turn
-		if (canPlayTurn())
-			players.get(currentPlayerIndex).play();
+		players.get(currentPlayerIndex).play();
 	}
 	
 	public void endPlayerTurn() {
-		Player player = players.get(currentPlayerIndex);
-		
-		// Removing current selected card and adding to fire pit
-		ArrayList<Card> hand = player.getHand();
-		Card selected = player.getSelectedCard();
-		
-		firePit.add(selected); // Adding to the firepit
-		hand.remove(selected); // removing from the hand list
-		
-		// Deselecting everything the current player has selected
-		player.deselectAll();
-		
-		// Moving on to the next player
-		if (currentPlayerIndex == 3) {
-			currentPlayerIndex = 0;
-			turn++;
-		} else {
-			currentPlayerIndex++;
-		}
-		
-		// Resetting the turn counter if 4 turns have passed
-		if (turn > 3) {
-			turn = 0;
-		}
-		
-		if (turn == 0) {
-			for (int i = 0; i < players.size(); i++) {
-				// refilling cards pool if there are fewer than 4 cards in the cards pool
-				if (Deck.getPoolSize() < 4) {
-					Deck.refillPool(firePit);
-					firePit.clear();
-				}
-				// Refilling cards into players' hands
-				players.get(i).setHand(Deck.drawCards());
-			}
-		}
-	}
+        Card selected = players.get(currentPlayerIndex).getSelectedCard();
+        players.get(currentPlayerIndex).getHand().remove(selected);
+        firePit.add(selected);
+        players.get(currentPlayerIndex).deselectAll();
+        
+        currentPlayerIndex = (currentPlayerIndex + 1) % 4;
+        
+        if(currentPlayerIndex == 0 && turn < 3) 
+            turn++;
+        
+        else if (currentPlayerIndex == 0 && turn == 3) {
+        	turn = 0;
+        	for (Player p : players) {
+              if(Deck.getPoolSize() < 4) {
+	              Deck.refillPool(firePit);
+	              firePit.clear();
+              }
+              ArrayList<Card> newHand = Deck.drawCards();
+              p.setHand(newHand);
+        	}
+        		
+        }
+        
+    }
 	
 	public Colour checkWin() {
 		ArrayList<SafeZone> safeZones = board.getSafeZones();
@@ -174,7 +160,7 @@ public class Game implements GameManager{
 	public void fieldMarble() throws CannotFieldException, IllegalDestroyException {
 		Marble marble = players.get(currentPlayerIndex).getOneMarble();
 		if (marble == null) {
-			throw new CannotFieldException("Marble does not exist");
+			throw new CannotFieldException("No marbles left in the Home Zone to field.");
 		}
 		
 		// Sends that marble from the home zone to the base
@@ -186,35 +172,24 @@ public class Game implements GameManager{
 	}
 	
 	public void discardCard(Colour colour) throws CannotDiscardException {
-		Player player = null;
-		
-		for (int i = 0; i < players.size(); i++) {
-			if (players.get(i).getColour() == colour) {
-				player = players.get(i);
-			}
-		}
-		
-		ArrayList<Card> hand = player.getHand();
-		
-		if (hand.size() == 0) {
-			throw new CannotDiscardException("No cards in hand!");
-		}
-		
-		Random rand = new Random();
-		int randomIndex = rand.nextInt(hand.size());
-		hand.remove(randomIndex);
-	}
-	
-	public void discardCard() throws CannotDiscardException {
-		Colour[] colours = Colour.values();
-		Random rand = new Random();
-		
-		int randomIndex = rand.nextInt(colours.length);
-		while(colours[randomIndex] == getActivePlayerColour())
-			randomIndex = rand.nextInt(colours.length);
-		
-		discardCard(colours[randomIndex]);
-	}
+        for (Player player : players) {
+            if (player.getColour() == colour) {
+                int handSize = player.getHand().size();
+                if(handSize == 0)
+                    throw new CannotDiscardException("Player has no cards to discard.");
+                int randIndex = (int) (Math.random() * handSize);
+                this.firePit.add(player.getHand().remove(randIndex));
+            }
+        }
+    }
+
+    public void discardCard() throws CannotDiscardException {
+        int randIndex = (int) (Math.random() * 4);
+        while(randIndex == currentPlayerIndex)
+            randIndex = (int) (Math.random() * 4);
+
+        discardCard(players.get(randIndex).getColour());
+    }
 	
 	public Colour getActivePlayerColour() {
 		return players.get(currentPlayerIndex).getColour();

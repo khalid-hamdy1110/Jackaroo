@@ -76,7 +76,7 @@ public class Player {
 	
 	public void selectMarble(Marble marble) throws InvalidMarbleException {
 		if (selectedMarbles.size() >= 2) {
-			throw new InvalidMarbleException("Can't select more than two marbles.");
+			throw new InvalidMarbleException("Can't select more than two marbles!");
 		} else if (selectedMarbles.indexOf(marble) == -1){
 			selectedMarbles.add(marble);
 		}
@@ -89,13 +89,13 @@ public class Player {
 	
 	public void play() throws GameException {
 		if (selectedCard == null) {
-			throw new InvalidCardException("No card selected");
+			throw new InvalidCardException("Must select a card to play!");
 		}
 		if(!selectedCard.validateMarbleSize(selectedMarbles)) {
-			throw new InvalidMarbleException("Invalid marble size");
+			throw new InvalidMarbleException("Invalid number of marbles selected for " + selectedCard.getName() + ".");
 		}
 		if(!selectedCard.validateMarbleColours(selectedMarbles)) {
-			throw new InvalidMarbleException("Invalid marble colours");
+			throw new InvalidMarbleException("Invalid marble colours selected for " + selectedCard.getName() + ".");
 		}
 		
 		selectedCard.act(selectedMarbles);

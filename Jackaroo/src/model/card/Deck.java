@@ -121,7 +121,10 @@ public class Deck {
 	// Milestone 2 methods
 	
 	public static void refillPool(ArrayList<Card> cards) {
-		cardsPool.addAll(cards);
+		for (int i = 0; i < cards.size(); i++) {
+			if (cards.get(i) != null)
+				cardsPool.add(cards.get(i));
+		}
 	}
 	
 	public static int getPoolSize() {
