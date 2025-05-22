@@ -25,13 +25,13 @@
 ## Gameplay Rules 📏🎴🏁
 
 1. **Fielding**  🍀🔄🎯
-   -Play an **Ace** or **King** to bring a marble from your home into your base cell (if free).
+   - Play an **Ace** or **King** to bring a marble from your home into your base cell (if free).
 
 2. **Movement**  🔄➡️🚀
-   -Play a numbered card to advance one marble exactly *N* spaces (wrapping the track), then into your safe zone if you reach your entry.
+   - Play a numbered card to advance one marble exactly *N* spaces (wrapping the track), then into your safe zone if you reach your entry.
 
 3. **Swapping**  🔃👥🔁
-   -Play a **Jack** to swap one of your marbles with any opponent’s track marble (not in their base).
+   - Play a **Jack** to swap one of your marbles with any opponent’s track marble (not in their base).
 
 4. **Burning**  🔥💥🔥
    Play the **MarbleBurner** wild card to send any opponent’s track marble back to their home. 
