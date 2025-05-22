@@ -34,22 +34,22 @@
    - Play a **Jack** to swap one of your marbles with any opponent’s track marble (not in their base).
 
 4. **Burning**  🔥💥🔥
-   Play the **MarbleBurner** wild card to send any opponent’s track marble back to their home. 
+   - Play the **MarbleBurner** wild card to send any opponent’s track marble back to their home. 
 
 5. **Saving**  💧💨🛡️
-   Play the **MarbleSaver** wild card to move one of your track marbles into a random empty safe-zone cell.
+   - Play the **MarbleSaver** wild card to move one of your track marbles into a random empty safe-zone cell.
 
 6. **Discard & Skip**  🚫⏭️🚷
-   Play a **Queen** (next player) or **Ten** (any player) to discard one card from their hand and skip their turn.
+   - Play a **Queen** (next player) or **Ten** (any player) to discard one card from their hand and skip their turn.
 
 7. **Split Seven**  7️⃣🤹📐
-   Play a **Seven** to split seven steps between two marbles (choose split distance 1–6).
+   - Play a **Seven** to split seven steps between two marbles (choose split distance 1–6).
 
 8. **Trap Cells**  💣🚫🧨
-   Landing on a trap cell destroys your marble back to home; that trap then relocates.
+   - Landing on a trap cell destroys your marble back to home; that trap then relocates.
 
 9. **Winning**  🏆🎉🥳
-   First to move all four marbles into your safe zone wins.
+   - First to move all four marbles into your safe zone wins.
   
 ## Installation & Running 🧱🛠️⚙️
 
