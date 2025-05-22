@@ -33,18 +33,16 @@
   
 ## Installation & Running 🧱🛠️⚙️
 
-Build with Maven or your preferred IDE (requires JDK 11+).
+1. **Clone** the repo:  
+   ```bash
+   git clone https://github.com/your-username/jackaroo.git
+   cd jackaroo
+   ```
+2. Build with Maven or your IDE (requires JDK 11+).
 
-Run the JavaFX application:
+3. Run the main() in controller.MainApp (or javafx:run via Maven).
 
-- **From your IDE**: run `controller.MainApp#main()`
-- **Or via Maven**:
-
-  ```bash
-  mvn javafx:run
-  ```
-
-Enter your name in the prompt, then click Play Turn to select cards and marbles! 🎮🧠🎯😃
+4. Enter your name, then click Play Turn to select cards and marbles!
 
 ## Project Structure 🗂️📁🧱
 
