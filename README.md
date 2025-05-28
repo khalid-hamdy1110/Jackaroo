@@ -40,7 +40,7 @@
    - Play the **MarbleSaver** wild card to move one of your track marbles into a random empty safe-zone cell.
 
 6. **Discard & Skip**  
-   - Play a **Queen** (next player) or **Ten** (any player) to discard one card from their hand and skip their turn.
+   - Play a **Queen** (any player) or **Ten** (next player) to discard one card from their hand and skip their turn.
 
 7. **Split Seven** 
    - Play a **Seven** to split seven steps between two marbles (choose split distance 1–6).
@@ -49,7 +49,7 @@
    - Landing on a trap cell destroys your marble back to home; that trap then relocates.
 
 9. **Winning**
-   - First to move all four marbles into your safe zone wins.
+   - First to move all four marbles into their safe zone wins.
   
 ## Installation & Running 🧱🛠️⚙️
 
@@ -84,7 +84,7 @@ src/
 - **Custom Exception Handling** for game-rule enforcement
 - **File I/O**: loading card definitions from CSV
 - **FXML & CSS** for responsive, styled GUIs
-- **MVC Pattern**: clear separation between engine and UI
+- **MVC Pattern**: clear separation between engine, UI and controllers
 - **Java Collections & Streams**: filtering, sorting, mapping
 - **Lambda Expressions** & **Functional Interfaces**
 
