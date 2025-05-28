@@ -500,6 +500,9 @@ public class MainController {
 	public void startTurn() {
 		updateAll();
 		
+		if (game.checkWin() != null) 
+			return;
+		
 		while (!game.canPlayTurn()) {
 			game.endPlayerTurn();
 			updateAll();
@@ -709,13 +712,13 @@ public class MainController {
 		
 		for (StackPane cell : trackCells) {
 			Circle circle = (Circle)cell.getChildren().get(0);
-			circle.setDisable(false);
+			circle.setDisable(true);
 		}
 		
 		for (List<StackPane> safezone : safezones) {
 			for (StackPane safezoneCell : safezone) {
 				Circle circle = (Circle)safezoneCell.getChildren().get(0);
-				circle.setDisable(false);
+				circle.setDisable(true);
 			}
 		}
 		
