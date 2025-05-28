@@ -11,10 +11,7 @@ import engine.Game;
 import engine.board.Board;
 import engine.board.Cell;
 import engine.board.SafeZone;
-import exception.CannotDiscardException;
-import exception.CannotFieldException;
 import exception.GameException;
-import exception.IllegalDestroyException;
 import exception.SplitOutOfRangeException;
 import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
@@ -38,6 +35,8 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 import model.Colour;
 import model.card.Card;
+import model.card.standard.Ace;
+import model.card.standard.King;
 import model.card.standard.Standard;
 import model.card.standard.Suit;
 import model.player.Marble;
@@ -62,12 +61,17 @@ public class MainController {
 	@FXML private Button playTurnBtn;
 	@FXML private TextField splitDistance;
 	@FXML private Button setSplitBtn;
+	@FXML private Label setSplitLabel;
 	@FXML private Pane alertPane;
 	@FXML private Label alertLabel;
 	@FXML private Button alertOkBtn;
 	@FXML private Pane errPane;
 	@FXML private Label errLabel;
+	@FXML private TextField waitTime;
+	@FXML private Button waitTimeBtn;
+	@FXML private Label waitTimeLabel;
 	
+	private double CPU_WAIT_TIME = 5;
 	private List<StackPane> trackCells; // UI track cells
 	private ArrayList<List<StackPane>> safezones; // UI safezones
 	private ArrayList<List<StackPane>> homezones; // UI homezones
@@ -105,7 +109,13 @@ public class MainController {
 		// Removing the split distance prompt
 		splitDistance.setVisible(false);
 		setSplitBtn.setVisible(false);
+		setSplitLabel.setVisible(false);
 		splitDistance.setText(game.getBoard().getSplitDistance()+"");
+		
+		// Removing the split distance prompt
+		waitTimeLabel.setVisible(false);
+		waitTime.setText(CPU_WAIT_TIME+"");
+		
 		
 		// Hiding the alert pane
 		alertOkBtn.setVisible(false);
@@ -227,6 +237,7 @@ public class MainController {
 			} else {
 				splitDistance.setVisible(false);
 				setSplitBtn.setVisible(false);
+				setSplitLabel.setVisible(false);
 				splitDistance.setText(game.getBoard().getSplitDistance()+"");
 			}
 		} else { // Deselecting card
@@ -236,6 +247,7 @@ public class MainController {
 			selectedCard = null;
 			splitDistance.setVisible(false);
 			setSplitBtn.setVisible(false);
+			setSplitLabel.setVisible(false);
 			splitDistance.setText(game.getBoard().getSplitDistance()+"");
 		}
 	}
@@ -514,7 +526,7 @@ public class MainController {
 				}
 			}
 			
-			PauseTransition pause = new PauseTransition(Duration.millis(5000));
+			PauseTransition pause = new PauseTransition(Duration.seconds(CPU_WAIT_TIME));
 	    	pause.setOnFinished(evt -> playCPUTurn());
 	    	pause.play();
 		} else {
@@ -580,6 +592,7 @@ public class MainController {
 			updateAll();
 			splitDistance.setVisible(false);
 			setSplitBtn.setVisible(false);
+			setSplitLabel.setVisible(false);
 			splitDistance.setText(game.getBoard().getSplitDistance()+"");
 			
 			if (game.checkWin() != null) {
@@ -618,6 +631,7 @@ public class MainController {
 		selectedMarbles.clear();
 		splitDistance.setVisible(false);
 		setSplitBtn.setVisible(false);
+		setSplitLabel.setVisible(false);
 		splitDistance.setText(game.getBoard().getSplitDistance()+"");
 		updateAll();
 		startTurn();
@@ -676,6 +690,10 @@ public class MainController {
 		try {
 			int distance = Integer.parseInt(splitDistance.getText());
 			game.editSplitDistance(distance);
+			setSplitLabel.setVisible(true);
+			PauseTransition pause = new PauseTransition(Duration.millis(2000));
+			pause.setOnFinished(event -> setSplitLabel.setVisible(false));
+			pause.play();
 		} catch (NumberFormatException err) {
 			showError("Split Distance set is not an int.");
 		} catch (SplitOutOfRangeException err) {
@@ -709,39 +727,26 @@ public class MainController {
 	}
 	
 	public void marbleFieldingShortcut(KeyEvent e) {
-//		if (e.getCode() == KeyCode.F && game.getActivePlayerColour() == players.get(0).getColour()) {
-//			for (Card card : players.get(0).getHand()) {
-//				if (card instanceof Ace || card instanceof King) {
-//					try {
-//						game.selectCard(card);
-//						
-//						game.playPlayerTurn();
-//						updateAll();
-//						game.endPlayerTurn();
-//					} catch (GameException err) {
-//						showError(err.getMessage());
-//						game.endPlayerTurn();
-//					}
-//					updateAll();
-//					startTurn();
-//					return;
-//				}
-//			}
-//			
-//			showError("No card available to use for fielding!");
-//		}
-		
-		if (e.getCode() == KeyCode.F) {
-			try {
-				game.fieldMarble();
-				game.discardCard(game.getActivePlayerColour());
-				game.endPlayerTurn();
-			} catch (CannotFieldException | CannotDiscardException | IllegalDestroyException err) {
-				showError(err.getMessage());
+		if (e.getCode() == KeyCode.F && game.getActivePlayerColour() == players.get(0).getColour()) {
+			for (Card card : players.get(0).getHand()) {
+				if (card instanceof Ace || card instanceof King) {
+					try {
+						game.selectCard(card);
+						
+						game.playPlayerTurn();
+						updateAll();
+						game.endPlayerTurn();
+					} catch (GameException err) {
+						showError(err.getMessage());
+						game.endPlayerTurn();
+					}
+					updateAll();
+					startTurn();
+					return;
+				}
 			}
-			updateAll();
-			startTurn();
-			return;
+			
+			showError("No card available to use for fielding!");
 		}
 	}
 	
@@ -767,5 +772,25 @@ public class MainController {
 	public void alertOK(ActionEvent e) {
 		alertOkBtn.setVisible(false);
 		errPane.setVisible(false);
+	}
+	
+	public void setCPUWait(ActionEvent e) {
+		try {
+			double time = Double.parseDouble(waitTime.getText());
+			if (time >= 0 && time <= 10) {
+				CPU_WAIT_TIME = time;
+				waitTime.setText(CPU_WAIT_TIME+"");
+				waitTimeLabel.setVisible(true);
+				PauseTransition pause = new PauseTransition(Duration.millis(2000));
+				pause.setOnFinished(event -> waitTimeLabel.setVisible(false));
+				pause.play();
+			} else {
+				showError("Not a valid number for time! 0-10s");
+				waitTime.setText(CPU_WAIT_TIME+"");
+			}
+		} catch (NumberFormatException err) {
+			showError("Not a valid number for time! 0-10s");
+			waitTime.setText(CPU_WAIT_TIME+"");
+		}
 	}
 }

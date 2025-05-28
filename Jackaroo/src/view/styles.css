@@ -9,5 +9,13 @@
 }
 
 .cards0:hover {
-  -fx-translate-y: -15px;
+	-fx-translate-y: -15px;
+}
+
+.btnsBrown:hover {
+	-fx-background-color: #592a0c !important;
+}
+
+.btnsCyan:hover {
+	-fx-background-color: #29aba9 !important;
 }

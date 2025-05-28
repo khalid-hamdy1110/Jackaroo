@@ -4,23 +4,17 @@ import java.util.ArrayList;
 
 import engine.GameManager;
 import engine.board.BoardManager;
-import exception.ActionException;
-import exception.InvalidMarbleException;
 import model.player.Marble;
 
-public class Five extends Standard{
-	public Five(String name, String description, Suit suit,
-			BoardManager boardManager, GameManager gameManager) {
-		super(name, description, 5, suit, boardManager, gameManager);
-	}
-	 
-	public boolean validateMarbleColours(ArrayList<Marble> marbles) {
-		 return true;
-	 }
-	 
-	public void act(ArrayList<Marble> marbles) throws ActionException, InvalidMarbleException {
-		
-		// Standard moving of a marble
-		boardManager.moveBy(marbles.get(0), 5, false);
-	}
+public class Five extends Standard {
+
+    public Five(String name, String description, Suit suit, BoardManager boardManager, GameManager gameManager) {
+        super(name, description, 5, suit, boardManager, gameManager);
+    }
+
+    @Override
+    public boolean validateMarbleColours(ArrayList<Marble> marbles) {
+        return true;
+    }
+
 }

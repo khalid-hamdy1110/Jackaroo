@@ -6,42 +6,38 @@ import engine.GameManager;
 import engine.board.BoardManager;
 import exception.ActionException;
 import exception.InvalidMarbleException;
+import model.Colour;
 import model.player.Marble;
 
-public class Jack extends Standard{
-	public Jack(String name, String description, Suit suit,
-			BoardManager boardManager, GameManager gameManager) {
-		super(name, description, 11, suit, boardManager, gameManager);
-	}
-	
-	public boolean validateMarbleSize(ArrayList<Marble> marbles) {
-		 if (marbles.size() == 1 || marbles.size() == 2) 
-			 return true;
-		 return false;
-	 }
-	 
-	public boolean validateMarbleColours(ArrayList<Marble> marbles) {
-		 if (marbles.size() == 1 && gameManager.getActivePlayerColour() != marbles.get(0).getColour()) {
-			 return false;
-		 }
-		 if (marbles.size() == 2) {
-			 if ((gameManager.getActivePlayerColour() != marbles.get(0).getColour() && gameManager.getActivePlayerColour() != marbles.get(1).getColour()) || (gameManager.getActivePlayerColour() == marbles.get(0).getColour() && gameManager.getActivePlayerColour() == marbles.get(1).getColour())) {
-				 return false;
-			 }
-		 }
-		 return true;
-	 }
-	 
-	public void act(ArrayList<Marble> marbles) throws ActionException, InvalidMarbleException {
-		
-		// Standard moving of a marble
-		if (marbles.size() == 1) {
-			boardManager.moveBy(marbles.get(0), 11, false);
-		}
-		
-		// Swapping a marble
-		if (marbles.size() == 2) {
-			boardManager.swap(marbles.get(0), marbles.get(1));
-		}
-	}
+public class Jack extends Standard {
+
+    public Jack(String name, String description, Suit suit, BoardManager boardManager, GameManager gameManager) {
+        super(name, description, 11, suit, boardManager, gameManager);
+    }
+    
+    @Override
+    public boolean validateMarbleSize(ArrayList<Marble> marbles) {
+        return marbles.size() == 2 || super.validateMarbleSize(marbles);
+    }
+
+    @Override
+    public boolean validateMarbleColours(ArrayList<Marble> marbles) {
+    	if(marbles.size() == 2) {
+    		Colour myColour = gameManager.getActivePlayerColour();
+    		return marbles.get(0).getColour().equals(myColour) != marbles.get(1).getColour().equals(myColour); 		
+    	}
+    	
+    	else
+    		return super.validateMarbleColours(marbles);
+    }
+
+    @Override
+    public void act(ArrayList<Marble> marbles) throws ActionException, InvalidMarbleException {
+        if(marbles.size() == 2)
+            boardManager.swap(marbles.get(0), marbles.get(1));
+        
+        else
+            super.act(marbles);
+    }
+
 }

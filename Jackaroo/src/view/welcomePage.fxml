@@ -18,851 +18,853 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="950.0" prefWidth="1250.0" style="-fx-background-color: #740000; -fx-border-color: #773811; -fx-border-width: 20;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.WelcomeController">
-   <children>
-      <Pane layoutX="360.0" layoutY="209.0" prefHeight="550.0" prefWidth="550.0" style="-fx-background-color: #c9a583; -fx-border-color: #773811; -fx-border-width: 10;" styleClass="board-grid">
-         <children>
-            <Circle fill="#773811" layoutX="275.0" layoutY="275.0" radius="102.0" stroke="BLACK" strokeType="INSIDE">
-               <effect>
-                  <InnerShadow height="100.0" radius="49.5" width="100.0" />
-               </effect>
-            </Circle>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="173.0" layoutY="241.0" prefHeight="69.0" prefWidth="204.0" text="JACKAROO" textAlignment="CENTER" textFill="#a17448">
-               <font>
-                  <Font name="Bernard MT Condensed" size="46.0" />
-               </font>
-               <effect>
-                  <InnerShadow choke="0.04" height="15.16" radius="8.54" />
-               </effect>
-            </Label>
-            <StackPane fx:id="card031" layoutX="177.0" layoutY="188.0" prefHeight="175.0" prefWidth="120.0" rotate="-29.1" styleClass="cards0" stylesheets="@styles.css">
-               <children>
-                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="175.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
-                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="165.0" stroke="#bc0000" strokeType="INSIDE" width="110.0" />
-                  <VBox alignment="TOP_CENTER" prefHeight="175.0" prefWidth="120.0">
-                     <children>
-                        <Label fx:id="cardName31" prefHeight="30.0" prefWidth="105.0" text="A" textFill="#bc0000">
-                           <font>
-                              <Font name="Verdana Bold" size="15.0" />
-                           </font>
-                           <VBox.margin>
-                              <Insets left="10.0" top="8.0" />
-                           </VBox.margin>
-                        </Label>
-                        <Label fx:id="description31" alignment="CENTER" contentDisplay="CENTER" prefHeight="125.0" prefWidth="105.0" text="❤" textAlignment="CENTER" textFill="#bc0000" wrapText="true">
-                           <font>
-                              <Font name="Verdana" size="87.0" />
-                           </font>
-                           <VBox.margin>
-                              <Insets />
-                           </VBox.margin>
-                        </Label>
-                        <Label fx:id="suit31" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="105.0" text="A" textFill="#bc0000">
-                           <font>
-                              <Font name="Verdana Bold" size="15.0" />
-                           </font>
-                           <VBox.margin>
-                              <Insets bottom="8.0" right="10.0" />
-                           </VBox.margin>
-                        </Label>
-                     </children>
-                  </VBox>
-               </children>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <effect>
-                  <DropShadow height="50.2" radius="21.195" spread="0.57" width="36.58" />
-               </effect>
-            </StackPane>
-            <StackPane fx:id="card03" layoutX="249.0" layoutY="188.0" prefHeight="175.0" prefWidth="120.0" rotate="26.6" styleClass="cards0" stylesheets="@styles.css">
-               <children>
-                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="175.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
-                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="165.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
-                  <VBox alignment="TOP_CENTER" prefHeight="175.0" prefWidth="120.0">
-                     <children>
-                        <Label fx:id="cardName3" prefHeight="30.0" prefWidth="105.0" text="A">
-                           <font>
-                              <Font name="Verdana Bold" size="15.0" />
-                           </font>
-                           <VBox.margin>
-                              <Insets left="10.0" top="8.0" />
-                           </VBox.margin>
-                        </Label>
-                        <Label fx:id="description3" alignment="CENTER" contentDisplay="CENTER" prefHeight="125.0" prefWidth="105.0" text="♠" textAlignment="CENTER" wrapText="true">
-                           <font>
-                              <Font name="Verdana" size="87.0" />
-                           </font>
-                           <VBox.margin>
-                              <Insets />
-                           </VBox.margin>
-                        </Label>
-                        <Label fx:id="suit3" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="105.0" text="A">
-                           <font>
-                              <Font name="Verdana Bold" size="15.0" />
-                           </font>
-                           <VBox.margin>
-                              <Insets bottom="8.0" right="10.0" />
-                           </VBox.margin>
-                        </Label>
-                     </children>
-                  </VBox>
-               </children>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <effect>
-                  <DropShadow height="50.2" radius="21.195" spread="0.57" width="36.58" />
-               </effect>
-            </StackPane>
-            <GridPane fx:id="boardGrid" alignment="CENTER" prefHeight="550.0" prefWidth="550.0" style="-fx-opacity: 0.6;">
-               <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-               </columnConstraints>
-               <rowConstraints>
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-               </rowConstraints>
-               <children>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="17" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="15" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="18" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="19" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="15" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="17" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="17" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="18" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="19" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="19" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.rowIndex="19" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="19" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="18" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="15" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="17" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="15">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="18" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.rowIndex="15" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="16" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="17" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="18" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="19" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="TOP">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="15" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="16" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="17" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="18" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="19" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="19" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="15" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="16" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="17" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="18" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="19" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="19" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="15" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="17" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="TOP">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="18" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="BOTTOM">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="14" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="15" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="TOP">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="14" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="13" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="TOP">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="15" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="16" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="16" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="17" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="18" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="18" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="17" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="16" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="16" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="15" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="BOTTOM">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="14" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="TOP">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="13" GridPane.halignment="CENTER" GridPane.rowIndex="15" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="16" GridPane.halignment="LEFT" GridPane.rowIndex="17" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="16" GridPane.halignment="CENTER" GridPane.rowIndex="18" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="17" GridPane.halignment="CENTER" GridPane.rowIndex="18" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="18" GridPane.halignment="CENTER" GridPane.rowIndex="17" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="18" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="17" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="TOP">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="16" GridPane.halignment="RIGHT" GridPane.rowIndex="15" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="16" GridPane.halignment="LEFT" GridPane.rowIndex="14" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="15" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="14" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="TOP">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="14" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="13" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="13" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="17" GridPane.halignment="RIGHT" GridPane.rowIndex="13" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="17" GridPane.halignment="RIGHT" GridPane.rowIndex="14" GridPane.valignment="TOP">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="18" GridPane.halignment="CENTER" GridPane.rowIndex="14" GridPane.valignment="TOP">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="18" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="6" GridPane.halignment="RIGHT" GridPane.rowIndex="18" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="6" GridPane.halignment="RIGHT" GridPane.rowIndex="17" GridPane.valignment="BOTTOM">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="18" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="17" GridPane.valignment="BOTTOM">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="BOTTOM">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="BOTTOM">
-                     <effect>
-                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
-                     </effect>
-                  </Circle>
-               </children>
-            </GridPane>
-         </children>
+
+  <AnchorPane prefHeight="950.0" prefWidth="1250.0" style="-fx-background-color: #780101; -fx-border-color: #47210a; -fx-border-width: 20;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.WelcomeController">
+		   <children>
+		      <Pane layoutX="360.0" layoutY="209.0" prefHeight="550.0" prefWidth="550.0" style="-fx-background-color: #c9a583; -fx-border-color: #773811; -fx-border-width: 10;" styleClass="board-grid">
+		         <children>
+		            <Circle fill="#773811" layoutX="275.0" layoutY="275.0" radius="102.0" stroke="BLACK" strokeType="INSIDE">
+		               <effect>
+		                  <InnerShadow height="100.0" radius="49.5" width="100.0" />
+		               </effect>
+		            </Circle>
+		            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="173.0" layoutY="241.0" prefHeight="69.0" prefWidth="204.0" text="JACKAROO" textAlignment="CENTER" textFill="#a17448">
+		               <font>
+		                  <Font name="Bernard MT Condensed" size="46.0" />
+		               </font>
+		               <effect>
+		                  <InnerShadow choke="0.04" height="15.16" radius="8.54" />
+		               </effect>
+		            </Label>
+		            <StackPane fx:id="card031" layoutX="177.0" layoutY="188.0" prefHeight="175.0" prefWidth="120.0" rotate="-29.1" styleClass="cards0" stylesheets="@styles.css">
+		               <children>
+		                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="175.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+		                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="165.0" stroke="#bc0000" strokeType="INSIDE" width="110.0" />
+		                  <VBox alignment="TOP_CENTER" prefHeight="175.0" prefWidth="120.0">
+		                     <children>
+		                        <Label fx:id="cardName31" prefHeight="30.0" prefWidth="105.0" text="A" textFill="#bc0000">
+		                           <font>
+		                              <Font name="Verdana Bold" size="15.0" />
+		                           </font>
+		                           <VBox.margin>
+		                              <Insets left="10.0" top="8.0" />
+		                           </VBox.margin>
+		                        </Label>
+		                        <Label fx:id="description31" alignment="CENTER" contentDisplay="CENTER" prefHeight="125.0" prefWidth="105.0" text="❤" textAlignment="CENTER" textFill="#bc0000" wrapText="true">
+		                           <font>
+		                              <Font name="Verdana" size="87.0" />
+		                           </font>
+		                           <VBox.margin>
+		                              <Insets />
+		                           </VBox.margin>
+		                        </Label>
+		                        <Label fx:id="suit31" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="105.0" text="A" textFill="#bc0000">
+		                           <font>
+		                              <Font name="Verdana Bold" size="15.0" />
+		                           </font>
+		                           <VBox.margin>
+		                              <Insets bottom="8.0" right="10.0" />
+		                           </VBox.margin>
+		                        </Label>
+		                     </children>
+		                  </VBox>
+		               </children>
+		               <cursor>
+		                  <Cursor fx:constant="HAND" />
+		               </cursor>
+		               <effect>
+		                  <DropShadow height="50.2" radius="21.195" spread="0.57" width="36.58" />
+		               </effect>
+		            </StackPane>
+		            <StackPane fx:id="card03" layoutX="254.0" layoutY="189.0" prefHeight="175.0" prefWidth="120.0" rotate="26.6" styleClass="cards0" stylesheets="@styles.css">
+		               <children>
+		                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="175.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+		                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="165.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+		                  <VBox alignment="TOP_CENTER" prefHeight="175.0" prefWidth="120.0">
+		                     <children>
+		                        <Label fx:id="cardName3" prefHeight="30.0" prefWidth="105.0" text="A">
+		                           <font>
+		                              <Font name="Verdana Bold" size="15.0" />
+		                           </font>
+		                           <VBox.margin>
+		                              <Insets left="10.0" top="8.0" />
+		                           </VBox.margin>
+		                        </Label>
+		                        <Label fx:id="description3" alignment="CENTER" contentDisplay="CENTER" prefHeight="125.0" prefWidth="105.0" text="♠" textAlignment="CENTER" wrapText="true">
+		                           <font>
+		                              <Font name="Verdana" size="87.0" />
+		                           </font>
+		                           <VBox.margin>
+		                              <Insets />
+		                           </VBox.margin>
+		                        </Label>
+		                        <Label fx:id="suit3" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="105.0" text="A">
+		                           <font>
+		                              <Font name="Verdana Bold" size="15.0" />
+		                           </font>
+		                           <VBox.margin>
+		                              <Insets bottom="8.0" right="10.0" />
+		                           </VBox.margin>
+		                        </Label>
+		                     </children>
+		                  </VBox>
+		               </children>
+		               <cursor>
+		                  <Cursor fx:constant="HAND" />
+		               </cursor>
+		               <effect>
+		                  <DropShadow height="50.2" radius="21.195" spread="0.57" width="36.58" />
+		               </effect>
+		            </StackPane>
+		            <GridPane fx:id="boardGrid" alignment="CENTER" layoutY="-7.0" prefHeight="550.0" prefWidth="550.0" style="-fx-opacity: 0.6;">
+		               <columnConstraints>
+		                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+		                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+		                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+		                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+		                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+		                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+		                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+		                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+		                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+		                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+		                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+		                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+		                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+		                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+		                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+		                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+		                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+		                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+		                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+		                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+		                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+		               </columnConstraints>
+		               <rowConstraints>
+		                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+		                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+		                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+		                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+		                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+		                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+		                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+		                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+		                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+		                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+		                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+		                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+		                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+		                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+		                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+		                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+		                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+		                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+		                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+		                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+		                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+		               </rowConstraints>
+		               <children>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="17" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="15" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="18" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="19" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="15" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="17" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="17" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="18" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="19" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="19" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.rowIndex="19" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="19" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="18" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="15" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="17" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="15">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="18" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.rowIndex="15" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="16" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="17" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="18" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="19" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="12" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="TOP">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="15" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="16" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="17" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="18" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="19" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="19" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="15" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="16" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="17" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="18" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="19" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="19" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="15" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="17" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="TOP">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="18" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="BOTTOM">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="14" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="15" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="TOP">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="14" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="13" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="TOP">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="15" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="16" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="16" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="17" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="18" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="18" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="17" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="16" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="16" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="15" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="BOTTOM">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="14" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="TOP">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="13" GridPane.halignment="CENTER" GridPane.rowIndex="15" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="16" GridPane.halignment="LEFT" GridPane.rowIndex="17" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="16" GridPane.halignment="CENTER" GridPane.rowIndex="18" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="17" GridPane.halignment="CENTER" GridPane.rowIndex="18" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="18" GridPane.halignment="CENTER" GridPane.rowIndex="17" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="18" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="17" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="TOP">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="16" GridPane.halignment="RIGHT" GridPane.rowIndex="15" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="16" GridPane.halignment="LEFT" GridPane.rowIndex="14" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="15" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="14" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="TOP">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="14" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="13" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="13" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="17" GridPane.halignment="RIGHT" GridPane.rowIndex="13" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="17" GridPane.halignment="RIGHT" GridPane.rowIndex="14" GridPane.valignment="TOP">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="18" GridPane.halignment="CENTER" GridPane.rowIndex="14" GridPane.valignment="TOP">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="18" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="6" GridPane.halignment="RIGHT" GridPane.rowIndex="18" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="6" GridPane.halignment="RIGHT" GridPane.rowIndex="17" GridPane.valignment="BOTTOM">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="18" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="17" GridPane.valignment="BOTTOM">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="BOTTOM">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		                  <Circle fill="#773811" radius="7.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="BOTTOM">
+		                     <effect>
+		                        <InnerShadow blurType="ONE_PASS_BOX" height="3.89" radius="10.6925" width="40.88" />
+		                     </effect>
+		                  </Circle>
+		               </children>
+		            </GridPane>
+		         </children>
+		         <effect>
+		            <DropShadow height="87.82" radius="40.4925" spread="0.34" width="76.15" />
+		         </effect>
+		      </Pane>
+		      <TextField fx:id="usernameTextField" alignment="CENTER" layoutX="495.0" layoutY="574.0" prefHeight="60.0" prefWidth="279.0" promptText="Enter Username">
+		         <font>
+		            <Font name="Arial Rounded MT Bold" size="30.0" />
+		         </font>
          <effect>
-            <DropShadow height="87.82" radius="40.4925" spread="0.34" width="76.15" />
+            <DropShadow height="100.0" radius="49.5" spread="0.5" width="100.0" />
          </effect>
-      </Pane>
-      <TextField fx:id="usernameTextField" alignment="CENTER" layoutX="495.0" layoutY="574.0" prefHeight="60.0" prefWidth="279.0" promptText="Enter Username">
-         <font>
-            <Font name="Arial Rounded MT Bold" size="30.0" />
-         </font>
+		      </TextField>
+		      <Button fx:id="play" defaultButton="true" layoutX="570.0" layoutY="648.0" mnemonicParsing="false" onAction="#play" prefHeight="52.0" prefWidth="129.0" style="-fx-background-color: #66310f;" styleClass="btnsBrown" stylesheets="@styles.css" text="PLAY" textFill="WHITE">
+		         <font>
+		            <Font name="Arial Rounded MT Bold" size="29.0" />
+		         </font>
+		         <cursor>
+		            <Cursor fx:constant="HAND" />
+		         </cursor>
          <effect>
-            <DropShadow height="104.5" radius="46.3975" spread="0.47" width="83.09" />
+            <DropShadow height="35.76" radius="24.68" spread="0.2" width="64.96" />
          </effect>
-      </TextField>
-      <Button fx:id="play" layoutX="570.0" layoutY="651.0" mnemonicParsing="false" onAction="#play" prefHeight="52.0" prefWidth="129.0" style="-fx-background-color: #2b841c;" text="PLAY" textFill="WHITE">
-         <font>
-            <Font name="Arial Rounded MT Bold" size="29.0" />
-         </font>
-         <effect>
-            <DropShadow height="74.34" radius="35.9375" spread="0.47" width="71.41" />
-         </effect>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor></Button>
-      <Label alignment="CENTER" layoutX="282.0" layoutY="117.0" prefHeight="234.0" prefWidth="706.0" styleClass="outline" stylesheets="@styles.css" text="JACKAROO">
-         <font>
-            <Font name="Bernard MT Condensed" size="160.0" />
-         </font>
-         <effect>
-            <DropShadow height="225.0" radius="112.0" spread="0.64" width="225.0" />
-         </effect>
-      </Label>
-      <Label fx:id="errorMsg" alignment="CENTER" contentDisplay="CENTER" layoutX="182.0" layoutY="763.0" prefHeight="60.0" prefWidth="900.0" textFill="#ffbcbc">
-         <font>
-            <Font name="Arial Rounded MT Bold" size="28.0" />
-         </font>
-      </Label>
-   </children>
-   <effect>
-      <InnerShadow height="104.24" radius="48.2125" width="90.61" />
-   </effect>
-</AnchorPane>
+      </Button>
+		      <Label alignment="CENTER" layoutX="282.0" layoutY="122.0" prefHeight="234.0" prefWidth="706.0" styleClass="outline" stylesheets="@styles.css" text="JACKAROO">
+		         <font>
+		            <Font name="Bernard MT Condensed" size="160.0" />
+		         </font>
+		         <effect>
+		            <DropShadow height="225.0" radius="112.0" spread="0.64" width="225.0" />
+		         </effect>
+		      </Label>
+		      <Label fx:id="errorMsg" alignment="CENTER" contentDisplay="CENTER" layoutX="182.0" layoutY="763.0" prefHeight="60.0" prefWidth="900.0" textFill="#ffbcbc">
+		         <font>
+		            <Font name="Arial Rounded MT Bold" size="28.0" />
+		         </font>
+		      </Label>
+		   </children>
+		   <effect>
+		      <InnerShadow height="104.24" radius="48.2125" width="90.61" />
+		   </effect>
+		</AnchorPane>

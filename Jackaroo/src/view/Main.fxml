@@ -2674,7 +2674,7 @@
             <DropShadow />
          </effect>
       </HBox>
-      <Button fx:id="playTurnBtn" alignment="CENTER" layoutX="929.0" layoutY="843.0" mnemonicParsing="false" onAction="#playTurn" prefHeight="48.0" prefWidth="204.0" style="-fx-background-color: #773811;" text="Play Turn" textAlignment="CENTER" textFill="WHITE">
+      <Button fx:id="playTurnBtn" alignment="CENTER" defaultButton="true" layoutX="928.0" layoutY="828.0" mnemonicParsing="false" onAction="#playTurn" prefHeight="48.0" prefWidth="204.0" style="-fx-background-color: #773811;" styleClass="btnsBrown" stylesheets="@styles.css" text="Play Turn" textAlignment="CENTER" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -2685,20 +2685,23 @@
             <DropShadow />
          </effect>
       </Button>
-      <TextField fx:id="splitDistance" layoutX="929.0" layoutY="798.0" prefHeight="36.0" prefWidth="110.0" promptText="Enter Split">
+      <TextField fx:id="splitDistance" layoutX="928.0" layoutY="783.0" prefHeight="36.0" prefWidth="110.0" promptText="Enter Split">
          <font>
             <Font size="16.0" />
          </font>
          <effect>
             <DropShadow />
          </effect></TextField>
-      <Button fx:id="setSplitBtn" alignment="CENTER" layoutX="1045.0" layoutY="798.0" mnemonicParsing="false" onAction="#setSplitDistance" prefHeight="35.0" prefWidth="87.0" style="-fx-background-color: #773811;" text="Set Split" textAlignment="CENTER" textFill="WHITE">
+      <Button fx:id="setSplitBtn" alignment="CENTER" layoutX="1044.0" layoutY="783.0" mnemonicParsing="false" onAction="#setSplitDistance" prefHeight="35.0" prefWidth="87.0" style="-fx-background-color: #773811;" styleClass="btnsBrown" stylesheets="@styles.css" text="Set Split" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Arial Rounded MT Bold" size="16.0" />
          </font>
          <effect>
             <DropShadow />
-         </effect></Button>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
       <Pane fx:id="alertPane" layoutX="325.0" layoutY="315.0" prefHeight="317.0" prefWidth="600.0" style="-fx-background-color: #FFF8E1; -fx-border-color: #9c4916; -fx-border-width: 10;">
          <children>
             <Label fx:id="alertLabel" alignment="CENTER" layoutX="10.0" layoutY="91.0" prefHeight="135.0" prefWidth="579.0" styleClass="outline2" stylesheets="@styles.css" text="Label" textFill="RED" wrapText="true">
@@ -2731,6 +2734,45 @@
             <DropShadow height="90.0" radius="44.5" width="90.0" />
          </effect>
       </Pane>
+      <Label layoutX="928.0" layoutY="881.0" prefHeight="36.0" prefWidth="204.0" text="* Press 'F' to field a marble if you have a fielding card!" textFill="#ff8f8f" wrapText="true">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="setSplitLabel" layoutX="1138.0" layoutY="783.0" prefHeight="35.0" prefWidth="87.0" text="* Split set!" textFill="#9ffb6e">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="waitTime" focusTraversable="false" layoutX="42.0" layoutY="56.0" prefHeight="29.0" prefWidth="127.0" promptText="Enter Time">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextField>
+      <Button fx:id="waitTimeBtn" alignment="CENTER" layoutX="176.0" layoutY="56.0" mnemonicParsing="false" onAction="#setCPUWait" prefHeight="29.0" prefWidth="53.0" style="-fx-background-color: #2cbfbd;" styleClass="btnsCyan" stylesheets="@styles.css" text="Set" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="43.0" layoutY="28.0" prefHeight="27.0" prefWidth="133.0" text="CPU Turn Time:" textFill="#99dfff">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="waitTimeLabel" layoutX="43.0" layoutY="87.0" prefHeight="25.0" prefWidth="87.0" text="* Time set!" textFill="#9ffb6e">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="16.0" />
+         </font>
+      </Label>
    </children>
    <effect>
       <InnerShadow height="40.0" radius="19.5" width="40.0" />

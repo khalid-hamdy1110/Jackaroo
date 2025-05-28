@@ -8,28 +8,24 @@ import exception.ActionException;
 import exception.InvalidMarbleException;
 import model.player.Marble;
 
-public class Queen extends Standard{
-	public Queen(String name, String description, Suit suit,
-			BoardManager boardManager, GameManager gameManager) {
-		super(name, description, 12, suit, boardManager, gameManager);
-	}
-	
-	public boolean validateMarbleSize(ArrayList<Marble> marbles) {
-		 if (marbles.size() == 0 || marbles.size() == 1) 
-			 return true;
-		 return false;
-	 }
-	 
-	public void act(ArrayList<Marble> marbles) throws ActionException, InvalidMarbleException {
-		
-		// Discarding a random card from a random player
-		if (marbles.size() == 0) {
-			gameManager.discardCard();
-		} 
-		
-		// Standard moving of a marble
-		if (marbles.size() == 1) {
-			boardManager.moveBy(marbles.get(0), 12, false);
-		}
-	}
+public class Queen extends Standard {
+
+    public Queen(String name, String description, Suit suit, BoardManager boardManager, GameManager gameManager) {
+        super(name, description, 12, suit, boardManager, gameManager);
+    }
+
+    @Override
+    public boolean validateMarbleSize(ArrayList<Marble> marbles) {
+        return marbles.isEmpty() || super.validateMarbleSize(marbles);
+    }
+
+    @Override
+    public void act(ArrayList<Marble> marbles) throws ActionException, InvalidMarbleException {
+        if (marbles.isEmpty()) 
+            this.gameManager.discardCard();
+        
+        else
+            super.act(marbles);
+    }
+
 }
