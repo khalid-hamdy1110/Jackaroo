@@ -24,31 +24,31 @@
 
 ## Gameplay Rules 📏🎴🏁
 
-1. **Fielding**  🍀🔄🎯
+1. **Fielding**  
    - Play an **Ace** or **King** to bring a marble from your home into your base cell (if free).
 
-2. **Movement**  🔄➡️🚀
+2. **Movement**  
    - Play a numbered card to advance one marble exactly *N* spaces (wrapping the track), then into your safe zone if you reach your entry.
 
-3. **Swapping**  🔃👥🔁
+3. **Swapping**  
    - Play a **Jack** to swap one of your marbles with any opponent’s track marble (not in their base).
 
-4. **Burning**  🔥💥🔥
+4. **Burning**  
    - Play the **MarbleBurner** wild card to send any opponent’s track marble back to their home. 
 
-5. **Saving**  💧💨🛡️
+5. **Saving**  
    - Play the **MarbleSaver** wild card to move one of your track marbles into a random empty safe-zone cell.
 
-6. **Discard & Skip**  🚫⏭️🚷
+6. **Discard & Skip**  
    - Play a **Queen** (next player) or **Ten** (any player) to discard one card from their hand and skip their turn.
 
-7. **Split Seven**  7️⃣🤹📐
+7. **Split Seven** 
    - Play a **Seven** to split seven steps between two marbles (choose split distance 1–6).
 
-8. **Trap Cells**  💣🚫🧨
+8. **Trap Cells**  
    - Landing on a trap cell destroys your marble back to home; that trap then relocates.
 
-9. **Winning**  🏆🎉🥳
+9. **Winning**
    - First to move all four marbles into your safe zone wins.
   
 ## Installation & Running 🧱🛠️⚙️
@@ -90,4 +90,4 @@ src/
 
 ---
 
-> Developed as part of CSEN 401 Computer Programming Lab, Spring 2025 (German University in Cairo) 🎓 © 2025 Khalid Hamdy, Mohamed Mostafa
+> Developed as part of CSEN 401 Computer Programming Lab, Spring 2025 (German University in Cairo) 🎓 © 2025 Khalid Hamdy, Mohamed Mostafa, Youssef Tamer
