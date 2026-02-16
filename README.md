@@ -1,5 +1,7 @@
 # Jackaroo: A New Game Spin 🎮🎯🧩
 
+## Video Demo: [Jackaroo Video Demo](https://www.linkedin.com/posts/khalid-hamdy_java-javafx-gamedev-activity-7366016595908792320-sVR_)
+
 ## Description 📜🧠🎲
 
 **Jackaroo** is a single-player adaptation of the classic marbles-and-cards game Jackaroo, built in Java with JavaFX. You play against three CPU opponents, each controlling their own colored marbles. Draw cards, move your marbles into the safe zone, avoid trap cells, and be the first to get all four of your marbles home! 🎯🚩🏁
